@@ -2,7 +2,11 @@ import discord
 import asyncio
 import pdb
 import hamutaro
+import configparser
+
+inifile = configparser.ConfigParser()
 client = discord.Client()
+
 
 @client.event
 async def on_ready():
@@ -15,9 +19,12 @@ async def on_ready():
 @client.event
 async def on_message(msg):
     if client.user != msg.author:
-        if "なあハム太郎" in msg.content and "お前もそう思う" in msg.content:
+        if "ハム太郎" in msg.content and "お前もそう思う" in msg.content:
             m = hamutaro.affirmation(msg, client)
             await client.send_message(msg.channel, m)
 
-## トークン情報を入力 ##
-client.run("## insert token here ##")
+## コンフィグ情報の読み込み ##
+
+inifile.read("../config.ini", "UTF-8")
+print(inifile.get("account", "token"))
+client.run(inifile.get("account", "token"))
