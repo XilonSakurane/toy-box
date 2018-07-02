@@ -37,4 +37,4 @@ async def on_message(msg):
 ## コンフィグ情報の読み込み ##
 inifile.read("../config.ini", "UTF-8")
 print(inifile.get("account", "token"))
-client.run(inifile.get("account", "token"))
+client.run(inifile.get("potter", "token"))
