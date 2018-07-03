@@ -1,3 +1,15 @@
-# toy-box
+﻿# toy-box
 
-test commit
+## 必須環境
+  わかんない(全部ノリでやってきたから調査しないといけない)
+
+## 使い方
+  1. botのトークンを取得してきます。  
+  2. config.ini内の利用したいbotの`token`にトークンを設定します。  
+  3. 対応したsrc/xxx.pyファイルを起動します。  
+  4. Let's enjoy!  
+
+## 追加した機能の一覧
+  * 全肯定ハム太郎(hamutaro.py)  
+  * ハリーポッターのリアクションつけてくれる機能(reactionPotter.py)  
+  * フリージアを流す機能(freesia.py)  
