@@ -5,7 +5,7 @@
   * `discord.py`を予め導入しておくこと
   * botのアカウントを作成しておくこと
 
-  * 導入方法などは[こちらの記事][https://qiita.com/PinappleHunter/items/af4ccdbb04727437477f]が参考になるかもです。
+  * 導入方法などは[こちらの記事](https://qiita.com/PinappleHunter/items/af4ccdbb04727437477f)が参考になるかもです。
 
 ## 使い方
   1. `config.ini`内の利用したいbotの`token`パラメータにトークンを設定します。  
