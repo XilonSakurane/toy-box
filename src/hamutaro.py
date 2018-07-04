@@ -24,7 +24,21 @@ async def on_message(msg):
     if client.user != msg.author:
         if "ハム太郎" in msg.content and "お前もそう思う" in msg.content:
             print("HamutaroRecognition:" + msg.content)
-            m = "そうなのだ！！！！！！！！！！！！！！！まったくもってその通りなのだ！！！！！！！！！！"
+            randNum = random.randrange(100)
+            if randNum <= 5:
+                m = "は？"
+            elif randNum == 6:
+                m = "何を言ってるのだ？"
+            elif randNum == 7:
+                m = "なんでも肯定するからといって調子乗らないほうがいいのだ"
+            elif randNum == 8:
+                m = "少しは自分の行いを見つめなおした方がいいのだ"
+            elif randNum == 9:
+                m = "ふざけるのも程々にしてほしいのだ"
+            else:
+                m = "そうなのだ！！！！！！！！！！！！！！！まったくもってその通りなのだ！！！！！！！！！！"
+
+            print("randNum:" + str(randNum))
             print("Say:" + m)
             await client.send_message(msg.channel, m)
 
