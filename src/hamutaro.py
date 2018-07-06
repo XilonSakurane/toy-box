@@ -41,6 +41,9 @@ async def on_message(msg):
             print("randNum:" + str(randNum))
             print("Say:" + m)
             await client.send_message(msg.channel, m)
+        if "ハム太郎" in msg.content and "ダイス" in msg.content:
+            randNum = str(random.randrange(6) + 1)
+            await client.send_message(msg.channel, randNum + "が出たのだ")
 
 ## コンフィグ情報の読み込み ##
 inifile.read("../config.ini", "UTF-8")
