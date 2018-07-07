@@ -28,7 +28,7 @@ async def on_message(msg):
             player = voice.create_ffmpeg_player("../audio/freesia.m4a")
             player.start()
             await client.send_message(msg.channel, "だからよ……止まるんじゃねえぞ……")
-            time.sleep(20)
+            time.sleep(15)
             # 全VCチャンネルから切断？
             for x in client.voice_clients:
                 await x.disconnect()
